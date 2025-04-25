@@ -11,7 +11,7 @@ function createServer() {
     console.log(givenUrl);
 
     if (givenUrl.pathname.includes('//')) {
-      givenUrl.pathname.replaceAll('//', '/');
+      givenUrl.pathname = givenUrl.pathname.replaceAll('//', '/');
     }
 
     const response = { parts: [], query: {} };
